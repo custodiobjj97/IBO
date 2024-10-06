@@ -1,0 +1,20 @@
+.about{
+    padding: 120px 12px;
+}
+
+.about-text h2,p,div{
+ margin-bottom: var(--mg-bottom);
+}
+
+.about-text .list-about{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap:1rem;
+}
+
+
+@media (min-width:1042px){
+  .about-text .list-about{
+        grid-template-columns: 1fr 1fr;
+    }
+}

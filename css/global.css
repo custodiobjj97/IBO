@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+}
+
+:root{
+    --color-header:hsl(220 45% 7.8%);
+    --color-primary:hsl(190 100% 19%);
+    --color-secundary:hsl(180 100% 35%);
+    --color-btn:hsl(190 27% 94%);
+    /*font-size*/
+    --font-small-title:2.76rem;
+    --font-mid-title:3rem;
+    --font-large-title:4rem;
+    /*margin-bottom*/
+    --mg-bottom:1.8rem;
+}
+
+
+a,span{
+    display: inline-block;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+
+button{
+    cursor: pointer;
+}
+
+button,textarea,input{
+    border: none;
+    background: none;
+    outline: none;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+.container{
+    max-width: 1600px;
+    width: 100%;
+    margin: auto;
+}
+
+.color-text{
+    color: #fff;
+    margin-bottom: var(--mg-bottom);
+}
+
+.text-subtitle{
+    color: var(--color-primary);
+}
+
+.grid-1{
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    gap: 1.5rem;
+}
+
+.grid-footer{
+    display: grid;
+    grid-template-columns: 1fr;
+    
+}
+
+.btn{
+    padding: 0.90rem 3rem;
+    background-color: var(--color-secundary);
+    color: #fff;
+    border-radius: 5px;
+}
+
+.btn-color{
+    background-color: var(--color-btn);
+    color: #000;
+}
+.flex-btn{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.scroll{
+    opacity: 0;
+    transform: translateX(-110px);
+    transition: ease-in-out .4s;
+}
+
+.scroll.visible{
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+
+.btn-wpp{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-secundary);
+    position: fixed;
+    top: 90%;
+    right: 10px;
+}
+
+.btn-wpp > i{
+    color: #fff;
+}
+
+
+@media (min-width:1042px){
+    .grid-1{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .grid-footer{
+        grid-template-columns: repeat(3,1fr);
+        place-items: center;
+    }
+}

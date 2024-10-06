@@ -1,0 +1,21 @@
+.doctor{
+    padding: 120px 12px;
+}
+
+.doctor-text h2{
+    margin-bottom: var(--mg-bottom);
+    color: var(--color-primary);
+    font-size: var(--font-small-title);
+}
+
+.list-doctor{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+@media (min-width:1042px){
+    .doctor-text h2{
+        font-size: var(--font-large-title);
+    }
+}

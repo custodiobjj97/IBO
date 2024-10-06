@@ -1,0 +1,114 @@
+header{
+    width: 100%;
+    height: 90px;
+    background-color: var(--color-header);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 222222;
+}
+
+.container-header{
+    max-width: 1600px;
+    width: 100%;
+    padding: 0.90rem;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+
+.list-menu{
+    width: 0%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top:0px;
+    right: 0px;
+    background-color: var(--color-header);
+    opacity: 0;
+    visibility: hidden;
+    gap: 1rem;
+    transition: .4s;
+}
+
+.list-menu.open{
+    width: 50%;
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.list-menu li a{
+    color: #fff;
+}
+
+.toggle{
+   width: 35px;
+   height: 35px;
+   position: absolute;
+    top: 1.7rem;
+    right: 2rem;
+    cursor: pointer;
+}
+
+.toggle .line{
+    border-top: 3px solid #fff;
+    width: 100%;
+    display: block;
+    
+    
+}
+
+.toggle .line::before,
+.toggle .line::after{
+    content: "";
+    width: 100%;
+    display: block;
+    background-color: #fff;
+    height: 3px;
+    display: block;
+    margin-top: 5px;
+    position: relative;
+    transition: .4s;
+}
+
+.toggle .line.open{
+    border-top-color:transparent;
+}
+
+.toggle .line.open::before{
+    content: "";
+    transform: rotate(215deg);
+}
+
+.toggle .line.open::after{
+    content: "";
+    transform: rotate(-215deg);
+    top: -7px;
+}
+
+
+@media (min-width:1042px){
+    .toggle{
+        display: none;
+    }
+
+
+    .list-menu{
+        opacity: 1;
+        visibility: visible;
+        width: 100%;
+        height: 0px;
+        top:50%;
+        flex-direction: row;
+    }
+
+
+}

@@ -1,0 +1,49 @@
+.contato{
+    padding: 220px 12px;
+    max-width: 1600px;
+    width: 100%;
+    margin: auto;
+}
+
+.contato h2{
+    font-size: var(--font-small-title);
+    margin-bottom: var(--mg-bottom);
+}
+
+form{
+    max-width: 550px;
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    gap: 1rem;
+}
+
+form > input{
+    width: 100%;
+    border: 2px var(--color-secundary) solid;
+    border-radius: 6px;
+    padding: 0.90rem;
+}
+
+form > textarea{
+    width: 100%;
+    height: 200px;
+    border:2px solid var(--color-secundary);
+    padding: 0.90rem;
+    border-radius: 6px;
+}
+
+form > button{
+    padding: .90rem 4rem;
+    background-color: var(--color-secundary);
+    border-radius: 5px;
+    color: #fff;
+}
+
+@media (min-width:1042px){
+    .contato h2{
+        font-size: var(--font-large-title);
+    }
+}
